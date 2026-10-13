@@ -1,0 +1,82 @@
+# ============================================================
+# Java / Maven 构建产物
+# ============================================================
+# 编译输出目录（Maven / Gradle 通用，递归匹配所有子模块）
+target/
+build/
+out/
+
+# 字节码与 hsperfdata
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
+
+# Maven wrapper 的 jar 需要提交，排除上面的 *.jar 规则
+!.mvn/wrapper/maven-wrapper.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven 临时 / 备份文件
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# ============================================================
+# 日志与运行时文件
+# ============================================================
+*.log
+logs/
+hs_err_pid*
+replay_pid*
+
+# 本地运行产生的数据文本（程序运行时会不断改写）
+**/src/main/resources/dept.txt
+**/src/main/resources/log.txt
+
+# ============================================================
+# IDE / 编辑器
+# ============================================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# ============================================================
+# 本地配置与环境（含敏感信息，不要提交）
+# ============================================================
+.env
+*.local
+application-local.properties
+application-local.yml
+application-local.yaml
+
+# ============================================================
+# 操作系统
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
