@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.mapper.StudentMapper">
+
+    <!--更新操作-->
+    <update id="update" parameterType="com.itheima.pojo.Student">
+        update student set `no`=#{no}, phone=#{phone}, id_card=#{idCard}, update_time=#{updateTime} where `id`=#{id}
+    </update>
+
+    <!--删除操作-->
+    <delete id="delete" parameterType="int">
+        delete from student where `id` = #{id}
+    </delete>
+
+</mapper>
