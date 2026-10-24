@@ -65,8 +65,6 @@ public class EmpServiceImpl implements EmpService {
             //执行保存
             empMapper.insert(emp);
 
-            int i=1/0;
-
             //保存员工工作经历 -批量
             Integer empId=emp.getId();
             List<EmpExpr> exprList=emp.getExprList();

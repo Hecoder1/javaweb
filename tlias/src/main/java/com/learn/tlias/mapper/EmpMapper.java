@@ -3,13 +3,11 @@ package com.learn.tlias.mapper;
 
 import com.learn.tlias.pojo.Emp;
 import com.learn.tlias.pojo.EmpQueryParam;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.*;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface EmpMapper {
@@ -30,4 +28,10 @@ public interface EmpMapper {
 
 
     void updateById(Emp emp);
+
+    /**
+     * 统计员工性别信息
+     */
+    @MapKey("name")
+    List<Map> countEmpGenderData();
 }
