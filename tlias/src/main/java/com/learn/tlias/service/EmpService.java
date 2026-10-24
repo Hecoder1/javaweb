@@ -5,10 +5,17 @@ import com.learn.tlias.pojo.EmpQueryParam;
 import com.learn.tlias.pojo.PageResult;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public interface EmpService {
 
     PageResult page(EmpQueryParam empQueryParam);
 
     void save(Emp emp);
+
+    void deleteByIds(List<Integer> ids);
+
+    Emp getInfo(Integer id);
+
+    void update(Emp emp);
 }
